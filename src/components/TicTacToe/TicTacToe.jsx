@@ -24,7 +24,7 @@ const Sqaure = ({
       if (count >= 4 && findWinner(copySquares, count).over) {
         setIsOver(true);
         setCount(0);
-        findWinner(copySquares, index)?.combo.map((c) => {
+        findWinner(copySquares, index)?.combo?.map((c) => {
           const winButton = document.querySelector(`[data-index='${c}']`);
           winButton.setAttribute("data-win", "true");
         });
@@ -51,47 +51,52 @@ const TicTacToe = () => {
   const [status, setStatus] = useState("");
 
   return (
-    <div className="tictactoe-container absolute-center">
-      <h1 className="heading text-center pb-1">TicTacToe Game</h1>
-      {squares && squares.length > 0 && (
-        <div className="square-container">
-          {squares.map((square, index) => (
-            <Sqaure
-              key={index}
-              setCount={setCount}
-              index={index}
-              sqaures={squares}
-              count={count}
-              isOver={isOver}
-              setIsOver={setIsOver}
-              setSquares={setSquares}
-              setStatus={setStatus}
-            />
-          ))}
-        </div>
-      )}
-      <p
-        style={{ visibility: `${isOver ? "visible" : "hidden"}` }}
-        className="text-center subheading tictactoe-status mb-1"
-      >
-        {status}
-      </p>
-      <button
-        className="play-again-btn"
-        style={{ visibility: `${isOver ? "visible" : "hidden"}` }}
-        onClick={() => {
-          setSquares([...Array(9).fill(null)]);
-          setIsOver(false);
-          setCount(0);
-          const winButtons = document.querySelectorAll(`[data-win="true"]`);
-          const xButtons = document.querySelectorAll(`[data-x="true"]`);
-          xButtons.forEach((x) => x.removeAttribute("data-x"));
-          winButtons.forEach((btn) => btn.removeAttribute("data-win"));
-        }}
-      >
-        Play Again
-      </button>
-    </div>
+    <>
+      <div className="tictactoe-container absolute-center">
+        <h1 className="heading text-center pb-1">TicTacToe Game</h1>
+        {squares && squares.length > 0 && (
+          <div className="square-container">
+            {squares.map((square, index) => (
+              <Sqaure
+                key={index}
+                setCount={setCount}
+                index={index}
+                sqaures={squares}
+                count={count}
+                isOver={isOver}
+                setIsOver={setIsOver}
+                setSquares={setSquares}
+                setStatus={setStatus}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+      <div className={`game-popup ${isOver ? "active" : ""}`}>
+        <p
+          style={{ visibility: `${isOver ? "visible" : "hidden"}` }}
+          className="text-center subheading tictactoe-status mb-1"
+        >
+          {status}
+        </p>
+        <button
+          className="play-again-btn"
+          style={{ visibility: `${isOver ? "visible" : "hidden"}` }}
+          onClick={() => {
+            setSquares([...Array(9).fill(null)]);
+            setIsOver(false);
+            setCount(0);
+            const winButtons = document.querySelectorAll(`[data-win="true"]`);
+            const xButtons = document.querySelectorAll(`[data-x="true"]`);
+            xButtons.forEach((x) => x.removeAttribute("data-x"));
+            winButtons.forEach((btn) => btn.removeAttribute("data-win"));
+          }}
+        >
+          Play Again
+        </button>
+      </div>
+      <div className={`overlay ${isOver ? "active" : ""}`}></div>
+    </>
   );
 };
 
@@ -123,12 +128,14 @@ function findWinner(sqaures, index) {
     }
   }
 
-  if (sqaures.every((s) => s !== null))
+  if (sqaures.every((s) => s !== null)) {
+    console.log("first");
     return {
       over: true,
       winner: null,
       message: `Match is draw`,
     };
+  }
 
   return {
     over: false,
