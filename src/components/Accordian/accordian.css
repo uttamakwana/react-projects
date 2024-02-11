@@ -1,0 +1,39 @@
+.accordian-parent {
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.accordian-child {
+  background-color: var(--clr-bg-50);
+}
+
+.accordian-child .accordian-question {
+  color: var(--clr-text);
+  font-size: 500;
+  padding: var(--padding);
+}
+
+.accordian-child .accordian-answer {
+  color: var(--clr-text-100);
+  margin-top: -1rem;
+  padding: 0 1rem 0.5rem 1rem;
+}
+
+.accordian-feature {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  max-width: 600px;
+  margin-inline: auto;
+  gap: 4px;
+  color: var(--clr-text-100);
+}
+
+.accordian-feature input {
+  height: 18px;
+  width: 18px;
+}
+
+.accordian-feature label {
+  line-height: 100%;
+}

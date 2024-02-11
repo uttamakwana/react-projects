@@ -1,0 +1,11 @@
+:root {
+  --clr-bg: hsl(214, 75%, 19%);
+  --clr-bg-50: hsl(214, 76%, 25%);
+  --clr-bg-100: hsl(214, 76%, 31%);
+  --clr-text: hsl(0, 0%, 100%);
+  --clr-text-50: hsl(0, 0%, 90%);
+  --clr-text-100: hsl(0, 0%, 80%);
+  --clr-accent: hsl(15, 97%, 60%);
+  --clr-accent-50: hsl(15, 97%, 65%);
+  --clr-accent-100: hsl(15, 97%, 70%);
+}

@@ -1,0 +1,42 @@
+.qr-code-generator-container {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.qr-code-generator-container svg {
+  max-width: 100%;
+  display: block;
+}
+
+.qr-code-generator-container .input {
+  display: flex;
+  width: 100%;
+  max-width: 480px;
+  gap: 4px;
+}
+
+.qr-code-generator-container .input input {
+  flex: 1;
+  padding: var(--padding);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.qr-code-generator-container .input button {
+  padding: var(--padding);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.qr-code-generator-container .input button:disabled {
+  cursor: not-allowed;
+}
+
+.qr-code-generator-container .input button:focus {
+  cursor: pointer;
+  background-color: var(--clr-bg-100);
+  color: var(--clr-text);
+}

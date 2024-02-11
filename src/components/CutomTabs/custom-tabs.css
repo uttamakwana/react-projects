@@ -1,0 +1,34 @@
+.custom-tab-buttons {
+  max-width: 680px;
+  display: flex;
+  gap: 1rem;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.custom-tab-buttons button {
+  flex: 1;
+  padding: var(--padding);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: var(--clr-bg-100);
+  border: 1px solid var(--clr-text);
+  color: var(--clr-text);
+  font-weight: 500;
+}
+
+.custom-tab-buttons button.active {
+  background-color: var(--clr-accent);
+  border: none;
+  /* border: 1px solid var(--clr-text); */
+}
+
+.custom-tabs {
+  max-width: 680px;
+  margin-inline: auto;
+  color: var(--clr-text);
+  background-color: var(--clr-bg-100);
+  padding: var(--padding);
+  border-radius: 5px;
+}

@@ -1,0 +1,50 @@
+.image-slider {
+  max-width: 1024px;
+  position: relative;
+}
+
+.slide {
+  border-radius: 5px;
+}
+
+.slide.hidden {
+  display: none;
+}
+
+.image-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(24px, 3vw, 32px);
+  cursor: pointer;
+  color: black;
+}
+
+.arrow-left {
+  left: 8px;
+}
+
+.arrow-right {
+  right: 8px;
+}
+
+.image-slider-buttons {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+}
+
+.image-slider-buttons button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: var(--clr-bg-100);
+  cursor: pointer;
+}
+
+.image-slider-buttons button.active {
+  background-color: var(--clr-accent);
+}

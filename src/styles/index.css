@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  -webkit-tap-highlight-color: transparent; /* For iOS Safari */
+  -webkit-touch-callout: none; /* Disable long press on link or image */
+  user-select: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* root variables */
+:root {
+  /* spacings */
+  --spacing: 1rem;
+  --padding: 1rem;
+  --gap: 1rem;
+
+  /* breakpoints */
+  --mobileBreakpoint: 480px;
+  --tabletBreakpoint: 768px;
+  --desktopBreakpoint: 1024px;
+  --largeScreenBreakpoint: 1440px;
+}
+
+.container {
+  max-width: var(--largeScreenBreakpoint);
+  width: calc(100% - calc(var(--spacing) * 2));
+  margin-inline: auto;
+}
+
+/* done with the resets */
+
+body {
+  /* background-color: var(--clr-bg); */
+  background-image: radial-gradient(
+    circle at center,
+    var(--clr-bg-100) 0%,
+    var(--clr-bg) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100svh;
+}
+
+.heading {
+  font-size: clamp(24px, 5vw, 40px);
+  color: var(--clr-text);
+  font-weight: 800;
+}
+
+.subheading {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 500;
+}
+
+.text-2 {
+  font-size: clamp(16px, 3vw, 18px);
+  font-weight: 500;
+}
+
+.text-1 {
+  font-size: clamp(14px, 3vw, 16px);
+  font-weight: 400;
+}
+
+p.error {
+  font-size: clamp(16px, 3vw, 20px);
+  text-align: center;
+  color: crimson;
+}

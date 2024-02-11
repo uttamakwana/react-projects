@@ -1,0 +1,35 @@
+.side-nav-menu-icon {
+  position: fixed;
+  top: var(--spacing);
+  right: var(--spacing);
+  font-size: clamp(30px, 3vw, 40px);
+  color: var(--clr-text);
+  cursor: pointer;
+}
+
+.menu-list {
+  position: absolute;
+  background-color: var(--clr-bg-50);
+  left: 0;
+  bottom: 0;
+  top: 0;
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.menu-list-item {
+  padding: calc(var(--padding) / 2);
+  background-color: var(--clr-bg-100);
+  color: var(--clr-text);
+  border-radius: 5px;
+}
+
+.menu-dropdown {
+  /* padding: var(--padding); */
+  /* display: none; */
+}
+
+.icon-container {
+}

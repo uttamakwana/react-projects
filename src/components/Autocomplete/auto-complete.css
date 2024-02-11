@@ -1,0 +1,69 @@
+.auto-complete-container {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.auto-complete-input input {
+  width: 100%;
+  padding: var(--padding);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.auto-complete-product-list {
+  background-color: var(--clr-text-100);
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  overflow: auto;
+  border-radius: 5px;
+}
+
+.auto-complete-product-list-item {
+  padding: var(--padding);
+  background: var(--clr-text);
+  color: var(--clr-bg);
+  transition: all ease 300ms;
+}
+.auto-complete-product-list-item:hover {
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  cursor: pointer;
+}
+
+.auto-complete-error {
+  color: var(--clr-text);
+}
+
+.auto-complete-product-card {
+  align-items: flex-start;
+}
+.auto-complete-product-card img {
+  max-width: 300px;
+  border-radius: 5px;
+}
+
+.auto-complete-product-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.auto-complete-product-card-content p:first-child {
+  color: var(--clr-text);
+}
+
+.auto-complete-product-card-content p:nth-child(2) {
+  color: var(--clr-text-50);
+}
+.auto-complete-product-card-content p:nth-child(3) {
+  color: var(--clr-text-100);
+}
+
+.auto-complete-product-card .subheading {
+  color: var(--clr-text);
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+}

@@ -1,0 +1,48 @@
+.scrollbar-header {
+  background: linear-gradient(to bottom, var(--clr-bg), var(--clr-bg-100));
+  height: 10svh;
+}
+
+.scrollbar-header h1 {
+  background-image: linear-gradient(
+    to bottom,
+    var(--clr-text),
+    var(--clr-text-100)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scroll-indicator {
+  height: 5px;
+  background-color: var(--clr-accent);
+}
+
+.scrollbar-container {
+  height: calc(90svh - 5px);
+  overflow: auto;
+}
+
+.scrollbar-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.scrollbar-container::-webkit-scrollbar-track {
+  background: var(--clr-bg-100);
+}
+
+/* Handle */
+.scrollbar-container::-webkit-scrollbar-thumb {
+  background: var(--clr-bg-50);
+}
+
+/* Handle on hover */
+.scrollbar-container::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-accent);
+}
+
+.scrollbar-container p:nth-child(even) {
+  background-color: var(--clr-bg-100);
+  color: var(--clr-text);
+}

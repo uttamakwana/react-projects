@@ -1,0 +1,55 @@
+.gu-profile {
+  margin-inline: auto;
+  max-width: 680px;
+  padding: var(--padding);
+  display: flex;
+  gap: 1rem;
+  background-color: var(--clr-bg-100);
+  margin-block-start: 2rem;
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+
+.guf-input {
+  margin-inline: auto;
+  max-width: 680px;
+  display: flex;
+  gap: 2px;
+}
+
+.guf-input input,
+.guf-input button {
+  padding: var(--padding);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.guf-input input {
+  flex: 1;
+}
+
+.guf-input button {
+  font-weight: 600;
+  background-color: var(--clr-accent-100);
+  width: min(20%, 150px);
+}
+
+.guf-input button:focus {
+  background-color: var(--clr-accent);
+  color: var(--clr-text);
+}
+
+.gu-profile-avatar {
+  max-width: 400px;
+  flex: 1;
+}
+
+.gu-profile-avatar img {
+  display: block;
+  margin-inline: auto;
+}
+
+.no-user-found {
+  color: var(--clr-text-100);
+}

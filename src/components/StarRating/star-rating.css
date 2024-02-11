@@ -1,0 +1,8 @@
+.star-icon {
+  font-size: clamp(40px, 5vw, 80px);
+  color: var(--clr-text);
+}
+
+.star-icon.active {
+  color: var(--clr-accent);
+}
