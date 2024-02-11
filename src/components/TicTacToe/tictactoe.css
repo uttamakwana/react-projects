@@ -30,17 +30,17 @@
 
 .play-again-btn {
   width: 100%;
-  max-width: 150px;
   display: block;
   margin-inline: auto;
   margin-block: 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 5px;
   font-weight: 600;
   font-family: "Roboto Slab";
   background-color: var(--clr-bg-100);
   color: var(--clr-text);
   border: 1px solid var(--clr-text);
+  font-size: clamp(20px, 3vw, 24px);
   /* animation: random 1000ms ease infinite; */
 }
 
@@ -80,6 +80,8 @@
   border-radius: 10px;
   z-index: 11000;
   transition: all ease 400ms;
+  max-width: 480px;
+  width: 100%;
 }
 
 .game-popup.active {
